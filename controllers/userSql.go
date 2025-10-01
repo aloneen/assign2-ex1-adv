@@ -49,7 +49,6 @@ func InsertUsers(users []models.User) {
 	fmt.Println("Users inserted in transaction")
 }
 
-ъ
 func QueryUsers(minAge, page, pageSize int) {
 	offset := (page - 1) * pageSize
 
@@ -72,7 +71,6 @@ func QueryUsers(minAge, page, pageSize int) {
 	}
 }
 
-
 func UpdateUser(id int, name string, age int) {
 	_, err := initializers.DB.Exec(
 		"UPDATE users SET name=$1, age=$2 WHERE id=$3",
@@ -83,7 +81,6 @@ func UpdateUser(id int, name string, age int) {
 	}
 	fmt.Printf("User %d updated\n", id)
 }
-
 
 func DeleteUser(id int) {
 	_, err := initializers.DB.Exec("DELETE FROM users WHERE id=$1", id)
