@@ -12,7 +12,7 @@ import (
 var DB *sql.DB
 
 func ConnectToDatabase() {
-	dsn := os.Getenv("DATABASE_URL")
+	dsn := os.Getenv("DB_URL")
 	var err error
 	DB, err = sql.Open("postgres", dsn)
 	if err != nil {
